@@ -1,17 +1,74 @@
+:root{
+  background-color: #363945;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+.fiveDayForecastText{
+  margin-left: 45px;
+}
+
+header {
+    background-color: #EFE1CE;
+    color: black;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  #searchInput{
+    background-color: #EFE1CE;
+    color: black;
+    border-radius: 6px;
+  }
+
+  button{
+    background-color: #EFE1CE;
+    margin-top: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .line {
+    border-bottom: 1px solid black;
+    margin-top: 15px;
+  }
+
 .forecastBoxes{
     flex-direction: row;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
 
 }
 
-.cityForecast{
-    border: 1px solid black;
+.cityForecast {
+    border: 3px solid black;
+    width: 59%;
     padding: 10px;
-}
+    display: inline-block;
+    vertical-align: top;
+  }
+
+
 .box{
-background-color: blue;
+background-color: #EFE1CE;
 padding: 10px;
 width: 130px
 }
 
+.fiveDayForecast {
+    margin-left: 22.9%;
+    width: 65%;
+    
+  }
+
+  .citySearch {
+    float: left;
+    width: 25%;
+  }

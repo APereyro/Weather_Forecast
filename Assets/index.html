@@ -12,17 +12,22 @@
     <section class="citySearch">
       <h1 class="searchForCity">Search for a City:</h1>
       <form>
-        <input type="text" id="searchInput" placeholder="San Diego" />
-        <button type="submit">Search</button>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="San Diego" />
+          <button type="submit">Search</button>
+          <div class="line"></div>
+        </div>
       </form>
     </section>
     <!-- <div class="forecast"> -->
       <section class="cityForecast">
-        <h1 id="currentCity">City</h1>
+        <h1 id="currentCity">City (Today)</h1>
         <h1 id="cityTemp">Temp: </h1>
+        <h1 id="cityWind">Wind: </h1>
+        <h1 id="cityHumidity">Humidity: </h1>
       </section>
       <section class="fiveDayForecast">
-        <h1>5-Day Forecast:</h1>
+        <h1 class=fiveDayForecastText>5-Day Forecast:</h1>
         <div class="forecastBoxes">
           <div class="box">
             <p>9/14/2022</p>
