@@ -4,13 +4,14 @@ const baseUrl = `https://api.openweathermap.org/data/2.5/forecast`;
 var form = document.querySelector("form");
 
 let cityName = document.getElementById("currentCity");
-
 let cityTemp = document.getElementById("cityTemp");
+let cityWind = document.getElementById('cityWind')
+let cityHumidity = document.getElementById('cityHumidity')
+
+let box1Day = document.getElementById('box1Day')
 
 const changeTempFormat = (temp) => {
   // function that changes the format
-
-
   // return yyour new data
 };
 
@@ -23,10 +24,11 @@ form.addEventListener("submit", (event) => {
     .then((data) => {
       // here is what type of bread I got you...
       console.log(data);
-
       cityName.innerHTML = data.city.name;
-
-      cityTemp.innerHTML += data.list[0].main.temp;
+      cityTemp.innerHTML += data.list[0].main.temp; //add farenheight with template literal 
+      cityWind.innerHTML += data.list[0].wind.speed;
+      cityHumidity.innerHTML += data.list[0].main.humidity;
+      box1Day.innerHTML += data.list[4].dt_txt;
     })
 
     .catch((err) => {
