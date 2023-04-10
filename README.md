@@ -1,6 +1,6 @@
 ## Weather Forecast App
 
-This is a simple web application that allows users to search for a city and get the weather forecast for the next 5 days. The application uses the OpenWeatherMap API to retrieve weather data in JSON format, and displays the data on the web page.
+This is a simple web application that allows users to search for a city and get the weather forecast for the next 5 days. The application uses the OpenWeatherMap API to retrieve weather data in JSON format, and displays the data on the web page. You can check it out here https://apereyro.github.io/Weather_Forecast/
 
 ## How to use
 
@@ -17,6 +17,8 @@ Weather forecast for the next 5 days, with the following information for each da
 -Temperature in Fahrenheit
 -Wind speed in MPH
 -Humidity in percentage
+
+![Screenshot (36)](https://user-images.githubusercontent.com/124737955/230908024-8b9f15f2-ae23-4beb-879b-5542c419d123.png)
 
 ## Technologies used
 
