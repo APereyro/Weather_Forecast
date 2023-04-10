@@ -1,8 +1,8 @@
 const API_KEY = "c742f6a434aba29ee3de171e2674ca24";
 const baseUrl = `https://api.openweathermap.org/data/2.5/forecast`;
-// var iconUrl = `https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`;
 var iconUrl = `https://openweathermap.org/img/wn`;
 var form = document.querySelector("form");
+
 
 let cityName = document.getElementById("currentCity");
 let cityImg = document.getElementById("cityImg")
@@ -55,7 +55,7 @@ form.addEventListener("submit", (event) => {
       cityTemp.innerHTML = `Temp: ${data.list[0].main.temp} &#8457;`;  
       cityWind.innerHTML = `Wind: ${data.list[0].wind.speed} MPH`;
       cityHumidity.innerHTML = `Humidity ${data.list[0].main.humidity} %`;
-      for(var i=0; i< 40;i=i+8){
+      for(var i=0; i< 40;i+=8){
         boxDay0.textContent = new Date(data.list[4].dt_txt).toLocaleDateString();
         boxImg0.innerHTML = `<img src="${iconUrl}/${data.list[4].weather[0].icon}.png">`;
         boxTemp0.textContent = `Temp: ${data.list[4].main.temp} °F`;
