@@ -2,9 +2,10 @@ const API_KEY = "c742f6a434aba29ee3de171e2674ca24";
 const baseUrl = `https://api.openweathermap.org/data/2.5/forecast`;
 var iconUrl = `https://openweathermap.org/img/wn`;
 var form = document.querySelector("form");
-
+// let recentSearches = document.getElementById('recentSearchesContainer')
 
 let cityName = document.getElementById("currentCity");
+let cityDate = document.getElementById('cityDate')
 let cityImg = document.getElementById("cityImg")
 let cityTemp = document.getElementById("cityTemp");
 let cityWind = document.getElementById('cityWind')
@@ -49,8 +50,8 @@ form.addEventListener("submit", (event) => {
     .then((response) => response.json()) 
     .then((data) => {
       console.log(data);
-
       cityName.innerHTML = data.city.name;
+      cityDate.innerHTML= new Date(data.list[0].dt_txt).toLocaleDateString();
       cityImg.innerHTML = `<img src="${iconUrl}/${data.list[0].weather[0].icon}.png">`;
       cityTemp.innerHTML = `Temp: ${data.list[0].main.temp} &#8457;`;  
       cityWind.innerHTML = `Wind: ${data.list[0].wind.speed} MPH`;
@@ -87,6 +88,10 @@ form.addEventListener("submit", (event) => {
         boxHumidity32.textContent = `Humidity: ${data.list[36].main.humidity} %`;
       }
     })
+
+    
+    
+    
     .catch((err) => {
       console.log("error", err);
     });
